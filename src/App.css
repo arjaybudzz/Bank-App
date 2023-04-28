@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.side-header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  background-color: #242424;
+}
+
+#dashboard-button, #deposit-button, #withdraw-button, #budget-button{
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  margin: 10px;
+}
+
+#logout-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  margin-top: 230px;
+}
+
+.dash-photo, .deposit-photo, .withdraw-photo, .budget-photo, .logout-photo {
+  width: 30px;
+}
+
+#dashboard-button:hover, #deposit-button:hover, #withdraw-button:hover, #budget-button:hover, #logout-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px white;
+  transition: 250ms all;
+  background-color: yellow;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 100px;
+  bottom: 550px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hydra-photo {
+  width: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hydra-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  position: fixed;
+  top: 110px;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+}
+
+
+.credit-card, .expense-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-start;
+  border-radius: 10px;
+  margin: 30px;
+  width: 3.37in;
+  height: 2.125in;
+  background-color: yellow;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.677);
+  padding: 10px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-name, .account-number, .validity {
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.balance-statement, .expense {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.account, .expense-statement {
+  margin: 0;
+  font-size: 25px;
+}
+
+.amount {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+.expense-display {
+  margin-left: 400px;
+}
