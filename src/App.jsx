@@ -7,6 +7,25 @@ import budg from './icons/budget.png'
 import lo from './icons/logout.png'
 import hyd from './icons/hydra.png'
 
+let user = {
+  name: 'Arjay',
+  accountNumber: '1982-1234-1111-5555',
+  validity: '02/28',
+  email: 'archessonan.1@gmail.com',
+  password: '12345',
+  accountBalance: 20000,
+  expenseItems: [{item: 'itemName', price: 1000}, {item: 'ItemName2', price: 2000}],
+  add: () => {
+
+  },
+  delete: () => {
+
+  },
+  list: () => {
+
+  }
+}
+
 function App() {
 
   return (
@@ -64,34 +83,55 @@ function MainInterface() {
     <div className='container'>
       <div className='credit-card'>
         <div className='card-info'>
-          <span className='account-name'>Arjay Onan</span>
-          <span className='account-number'>1092-2213-1098-1778</span>
-          <span className='validity'>02/28</span>
+          <span className='account-name'>{user.name}</span>
+          <span className='account-number'>{user.accountNumber}</span>
+          <span className='validity'>{user.validity}</span>
         </div>
         <div className='balance-statement'>
           <p className='account'>Account Balance:</p>
-          <span className='amount'>P {2000.50.toFixed(2)}</span>
+          <span className='amount'>P {user.accountBalance.toFixed(2)}</span>
         </div>
       </div>
 
       <DisplayExpense />
+      <ExchangeRate />
     </div>
   );
 }
 
 function DisplayExpense() {
   return (
-    <div className='container'>
       <div className='expense-display'>
         <div className='expense'>
           <p className='expense-statement'>Planned Expenses:</p>
           <span className='amount'>P {0.00.toFixed(2)}</span>
         </div>
+        <div className='show-list-container'>
+          <button className='show-list'>Show Expense List</button>
+        </div>
         <div className='remarks'>
-
+          <p className='advice'>Spend your money wisely!</p>
         </div>
       </div>
-    </div>
+  );
+}
+
+function ExchangeRate() {
+  return (
+      <div className='exchange-rate-display'>
+        <div className='exchange-rate-text'>
+          <p className='exchange-rate-statement'>Exchange Rate:</p>
+        </div>
+        <div>
+          <p className='currency1'>PHP: </p>
+        </div>
+        <div>
+          <p className='currency2'>USD: </p>
+        </div>
+        <div className='currency-button-container'>
+          <button className='change-currency-button'>Change Currency</button>
+        </div>
+      </div>
   );
 }
 

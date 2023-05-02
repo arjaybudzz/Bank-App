@@ -58,6 +58,7 @@
   position: fixed;
   justify-content: flex-start;
   align-items: center;
+  background-color: yellow;
   top: 0;
   right: 0;
   left: 100px;
@@ -79,7 +80,8 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex: auto auto auto;
   justify-content: flex-start;
   align-items: start;
   position: fixed;
@@ -90,7 +92,7 @@
 }
 
 
-.credit-card, .expense-display {
+.credit-card, .expense-display, .exchange-rate-display {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -122,7 +124,7 @@
   align-items: flex-start;
 }
 
-.account, .expense-statement {
+.account, .expense-statement, .exchange-rate-statement {
   margin: 0;
   font-size: 25px;
 }
@@ -133,9 +135,37 @@
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 200px;
+  margin-left: 170px;
 }
 
 .expense-display {
-  margin-left: 400px;
+  align-self: flex-start;
+}
+
+.exchange-rate-display {
+  display: flex;
+}
+
+.advice {
+  font-size: 22px;
+  margin-left: 30px;
+}
+
+.show-list-container, .currency-button-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.show-list, .change-currency-button {
+  height: 40px;
+  background-color: black;
+  color: yellow;
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.change-currency-button:hover, .show-list:hover {
+  cursor: pointer !important;
 }
